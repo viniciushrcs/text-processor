@@ -10,4 +10,11 @@ describe('safeRegex', () => {
 
     expect(() => evaluateRegex(unsafeRegex)).to.throw(InvalidRegexError, `The regex: ${unsafeRegex} is not safe!`)
   })
+
+  it('should not throw an error when regex is safe', () => {
+    const safeRegex = /^([a-z])/
+
+    expect(() => evaluateRegex(safeRegex)).to.not.throw
+    expect(evaluateRegex(safeRegex)).to.be.ok
+  })
 })
