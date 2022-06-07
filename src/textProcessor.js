@@ -1,4 +1,5 @@
 const { evaluateRegex } = require('../util/safeRegex')
+const Person = require('./entities/person')
 
 class TextProcessor {
   #content
@@ -23,6 +24,11 @@ class TextProcessor {
     const trimSpaces = evaluateRegex(/^\s+|\s+$|\n/g)
     this.#content = this.#content.map(line => line.map(item => item.replace(trimSpaces, "")))
 
+    return this
+  }
+
+  mapPerson() {
+    this.#content = this.#content.map(line => new Person(line))
     return this
   }
 
