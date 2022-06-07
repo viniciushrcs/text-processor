@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "start:dev": "nodemon src/index.js",
-    "test": "npx mocha -w --parallel test/*.test.js",
-    "test:coverage": "npx nyc npx mocha -w --parallel test/*.test.js"
+    "test": "npx mocha -w --parallel test/*.test.js test/*/*.test.js",
+    "test:coverage": "npx nyc npx mocha -w --parallel test/*.test.js test/*/*.test.js"
   },
   "keywords": [],
   "author": "",
