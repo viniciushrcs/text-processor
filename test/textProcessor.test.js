@@ -120,8 +120,6 @@ describe('TextProcessor', () => {
           estado: "São Paulo"
       }
     ]
-
-    console.log(result)
     expect(result).to.be.deep.equal(expectedResult)
   })
 })
