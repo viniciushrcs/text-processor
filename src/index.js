@@ -13,5 +13,3 @@ const TextProcessorFacade = require('./textProcessorFacade')
 
   console.log('People from contract', people)
 })()
-
-
